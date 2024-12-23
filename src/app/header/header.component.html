@@ -1,0 +1,16 @@
+<div class = "header-main">
+	<div class = "header-content">
+		<a href="/" target="_self">{{title}}</a>
+		<div class = "header-button-group">
+			@for (item of [
+				{title: "Portfolio", link: "/portfolio"},
+				{title: "CV", link: "/cv"}
+			]; track $index) {
+				<a [routerLink]="item.link"
+				routerLinkActive="active">
+				<span>{{item.title}}</span>
+				</a>
+			}
+		</div>
+	</div>
+</div>
