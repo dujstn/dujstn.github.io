@@ -5,8 +5,8 @@ import { HeaderComponent } from '../header/header.component';
   selector: 'app-cv',
   imports: [HeaderComponent],
   templateUrl: './cv.component.html',
-  styleUrl: './cv.component.css'
+  styleUrl: './cv.component.css',
 })
 export class CvComponent {
-
+  src = '/assets/resume.pdf';
 }
