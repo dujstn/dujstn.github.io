@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
+import { Project } from './portfolio-entry/portfolio-entry.interface';
 
 @Component({
   selector: 'app-portfolio',
   imports: [HeaderComponent],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.css'
+  styleUrl: './portfolio.component.css',
 })
 export class PortfolioComponent {
-  title= "Justin Du"
+  @Input() project!: Project;
+  title = 'Justin Du';
 }

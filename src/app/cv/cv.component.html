@@ -1,9 +1,18 @@
-<app-header />
+<app-header class="header" />
 <div class="main">
   <div class="content">
-    <p>cv works!</p>
-    <a class="pill" href="/assets/resume.pdf" target="_blank"
-      >Download Full CV</a
-    >
+    <div class="cv-download-pill">
+      <a class="pill" href="/assets/cv/resume.pdf" target="_blank"
+        >Download Full CV</a
+      >
+    </div>
+    <div class="cv-content">
+      @for (item of [ {title: "Education", description: "University of Toronto,
+      2023 - 2027"}, {title: "Experience", description: "Knockri"}, {title:
+      "Awards"}, ]; track item.title) {
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description }}</p>
+      }
+    </div>
   </div>
 </div>
