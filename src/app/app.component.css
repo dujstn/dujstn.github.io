@@ -26,3 +26,16 @@
   min-height: 100vh;
   background-color: var(--primary-background);
 }
+
+.footer {
+  color: var(--primary-purple);
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  align-self: center;
+  position: absolute;
+  bottom: 0;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+}
