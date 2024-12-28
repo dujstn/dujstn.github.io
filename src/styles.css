@@ -1,5 +1,34 @@
+.global {
+  --primary-purple: oklch(54.57% 0.1662 278.57);
+  --primary-blue: oklch(54.05% 0.2348 270.07);
+
+  --primary-background: oklch(99.12% 0.0099 99.83);
+
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+
+  --purple-to-blue-gradient: linear-gradient(
+    180deg,
+    var(--primary-purple) 0%,
+    var(--primary-blue) 100%
+  );
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--primary-background);
+}
+
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -21,11 +50,6 @@ a {
   color: black;
 }
 
-.header {
-  top: 0;
-  position: sticky;
-}
-
 .content {
   display: flex;
   flex-direction: column;
@@ -36,7 +60,7 @@ a {
 
 .v-divider {
   width: 1px;
-  background: var(--red-to-pink-to-purple-vertical-gradient);
+  background: var(--purple-to-blue-gradient);
   margin-inline: 0.5rem;
 }
 
@@ -63,3 +87,4 @@ a {
     transform: translateY(0);
   }
 }
+

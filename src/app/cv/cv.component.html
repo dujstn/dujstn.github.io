@@ -2,18 +2,47 @@
 <div class="main">
   <div class="content">
     <div class="cv-download-pill">
-      <a class="pill" href="/assets/cv/resume.pdf" target="_blank"
-        >Download Full CV</a
-      >
+      <a class="pill" href="{{ res_src }}" target="_blank">Download Full CV</a>
     </div>
     <div class="cv-content">
-      @for (item of [ {title: "Education", description: "University of Toronto,
-      2023 - 2027. HBSc. Computer Science, ASIP Stream."}, {title: "Experience",
-      description: "Knockri, Toronto, ON. Machine learning development in
-      Python."}, {title: "Awards", description: "2x Canada Wide Science Fair
-      alumna."}, ]; track item.title) {
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.description }}</p>
+      <h2>Education</h2>
+      @for (item of education_entries; track item.title){
+      <div class="cv-entry">
+        <div class="entry-title">
+          <h3>{{ item.title }}</h3>
+        </div>
+        <div class="entry-description">
+          <img class="organization-logo" src="{{ item.src }}" />
+          <div class="v-divider" role="separator" aria-label="Divider"></div>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      }
+      <h2>Experience</h2>
+      @for (item of experience_entries; track item.title){
+      <div class="cv-entry">
+        <div class="entry-title">
+          <h3>{{ item.title }}</h3>
+        </div>
+        <div class="entry-description">
+          <img class="organization-logo" src="{{ item.src }}" />
+          <div class="v-divider" role="separator" aria-label="Divider"></div>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      }
+      <h2>Awards</h2>
+      @for (item of award_entries; track item.title) {
+      <div class="cv-entry">
+        <div class="entry-title">
+          <h3>{{ item.title }}</h3>
+        </div>
+        <div class="entry-description">
+          <img class="organization-logo" src="{{ item.src }}" />
+          <div class="v-divider" role="separator" aria-label="Divider"></div>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
       }
     </div>
   </div>

@@ -1,0 +1,13 @@
+.main {
+  color: var(--primary-purple);
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+  align-self: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
