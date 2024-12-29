@@ -40,7 +40,7 @@ export class CvComponent {
     {
       title: 'Canada-Wide Science Fair, Bronze Medalist',
       description:
-        '2x alumna among the top 0.1% of projects presented in Canada.',
+        '2x alumna among the top 0.1% of projects presented annualy in Canada.',
       src: '/assets/cv/ysc.png',
       web_link: 'https://youthscience.ca/',
     },

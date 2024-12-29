@@ -65,8 +65,8 @@ a {
 }
 
 .h-divider {
-  width: 1px;
-  background: var(--red-to-pink-to-purple-vertical-gradient);
+  height: 1px;
+  background: var(--purple-to-blue-gradient);
   margin-inline: 0.5rem;
 }
 
@@ -87,4 +87,3 @@ a {
     transform: translateY(0);
   }
 }
-

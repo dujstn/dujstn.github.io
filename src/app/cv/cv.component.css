@@ -7,28 +7,28 @@
 
 .cv-entry {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding-left: 2.5vw;
+  align-items: center;
+  gap: 2%;
 }
 
 .entry-description {
   display: flex;
-  flex-direction: row;
-  padding-left: 2.5vw;
+  flex-direction: column;
 }
 
-.entry-description img,
-p {
-  align-self: center;
+.h-divider {
+  display: none;
+}
+
+.logo-link:hover {
+  opacity: 25%;
+  transition: 0.25s;
 }
 
 .organization-logo {
   max-width: 10vw;
-}
-
-.organization-logo:hover {
-  size: 101%;
-  transition: ease 1s;
 }
 
 .pill {
@@ -56,7 +56,11 @@ h3 {
 }
 
 @media screen and (max-width: 650px) {
-  .entry-description {
+  .h-divider {
+    display: block;
+    margin: 10%;
+  }
+  .cv-entry {
     flex-direction: column;
   }
   .entry-description p {

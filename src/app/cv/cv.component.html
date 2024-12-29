@@ -5,45 +5,68 @@
       <a class="pill" href="{{ res_src }}" target="_blank">Download Full CV</a>
     </div>
     <div class="cv-content">
-      <h2>Education</h2>
-      @for (item of education_entries; track item.title){
-      <div class="cv-entry">
-        <div class="entry-title">
-          <h3>{{ item.title }}</h3>
-        </div>
-        <div class="entry-description">
-          <img class="organization-logo" src="{{ item.src }}" />
-          <div class="v-divider" role="separator" aria-label="Divider"></div>
-          <p>{{ item.description }}</p>
-        </div>
+      <div class="cv-category-title">
+        <h2>Education</h2>
       </div>
-      }
-      <h2>Experience</h2>
-      @for (item of experience_entries; track item.title){
-      <div class="cv-entry">
-        <div class="entry-title">
-          <h3>{{ item.title }}</h3>
+      <div class="cv-category-entries">
+        @for (item of education_entries; track item.title){
+        <div class="cv-entry">
+          <div class="logo-link">
+            <a href="{{ item.web_link }}" target="_blank"
+              ><img class="organization-logo" src="{{ item.src }}"
+            /></a>
+          </div>
+          <div class="entry-description">
+            <div class="entry-title">
+              <h3>{{ item.title }}</h3>
+            </div>
+            <p>{{ item.description }}</p>
+          </div>
         </div>
-        <div class="entry-description">
-          <img class="organization-logo" src="{{ item.src }}" />
-          <div class="v-divider" role="separator" aria-label="Divider"></div>
-          <p>{{ item.description }}</p>
-        </div>
+        }
       </div>
-      }
-      <h2>Awards</h2>
-      @for (item of award_entries; track item.title) {
-      <div class="cv-entry">
-        <div class="entry-title">
-          <h3>{{ item.title }}</h3>
-        </div>
-        <div class="entry-description">
-          <img class="organization-logo" src="{{ item.src }}" />
-          <div class="v-divider" role="separator" aria-label="Divider"></div>
-          <p>{{ item.description }}</p>
-        </div>
+      <div class="h-divider" role="separator" aria-label="Divider"></div>
+      <div class="cv-category-title">
+        <h2>Experience</h2>
       </div>
-      }
+      <div class="cv-category-entries">
+        @for (item of experience_entries; track item.title){
+        <div class="cv-entry">
+          <div class="logo-link">
+            <a href="{{ item.web_link }}" target="_blank"
+              ><img class="organization-logo" src="{{ item.src }}"
+            /></a>
+          </div>
+          <div class="entry-description">
+            <div class="entry-title">
+              <h3>{{ item.title }}</h3>
+            </div>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="h-divider" role="separator" aria-label="Divider"></div>
+      <div class="cv-category-title>">
+        <h2>Awards</h2>
+      </div>
+      <div class="cv-category-entries">
+        @for (item of award_entries; track item.title) {
+        <div class="cv-entry">
+          <div class="logo-link">
+            <a href="{{ item.web_link }}" target="_blank"
+              ><img class="organization-logo" src="{{ item.src }}"
+            /></a>
+          </div>
+          <div class="entry-description">
+            <div class="entry-title">
+              <h3>{{ item.title }}</h3>
+            </div>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        }
+      </div>
     </div>
   </div>
 </div>
