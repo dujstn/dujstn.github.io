@@ -1,8 +1,36 @@
 <app-header class="header" />
 <div class="main">
   <div class="content">
-    <!-- <video class="drmario-video" autoplay loop>
-      <source src="/assets/portfolio/drmario.mp4" type="video/mp4" />
-    </video> -->
+    <ng-container *ngFor="let project of getPortfolioEntries()">
+      <div class="portfolio-entry">
+        <div class="portfolio-title">
+          <h2>{{ project.title }}</h2>
+        </div>  
+        <div class="portfolio-content">
+          <div class="portfolio-text-and-links">
+            <p class="portfolio-description">
+              {{ project.description }}
+            </p>
+            <div class="pill-group">
+              <ng-container *ngFor="let link of getEntryLinksByID(project.id)">
+                <a href="{{ link[1] }}" class="pill" target="_blank">{{
+                  link[0]
+                }}</a></ng-container
+              >
+            </div>
+          </div>
+          <div class="portfolio-media">
+            <ng-container *ngIf="isVideoByID(project.id) == false">
+              <img src="{{ project.media }}" class="project-media" />
+            </ng-container>
+            <ng-container *ngIf="isVideoByID(project.id) == true">
+              <video autoplay loop class="project-media">
+                <source src="{{ project.media }}" type="video/mp4" />
+              </video>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </ng-container>
   </div>
 </div>
