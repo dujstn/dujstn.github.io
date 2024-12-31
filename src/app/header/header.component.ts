@@ -1,19 +1,24 @@
-import { NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, RouterLinkActive, NgIf],
+  imports: [RouterLink, RouterLinkActive, NgIf, NgClass, FooterComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   public screenWidth!: number;
-
-  private drawerIsOpen: boolean = false;
+  public drawerIsOpen: boolean = false;
 
   title: string = 'Justin Du';
+
+  nav_links = [
+    { title: 'Portfolio', link: '/portfolio' },
+    { title: 'CV', link: '/cv' },
+  ];
 
   ngOnInit() {
     this.screenWidth = window.innerWidth;

@@ -5,8 +5,7 @@
     >
     <ng-container *ngIf="!isMobileWidth()">
       <div class="header-button-group">
-        @for (item of [ {title: "Portfolio", link: "/portfolio"}, {title: "CV",
-        link: "/cv"} ]; track $index) {
+        @for (item of nav_links; track item.title) {
         <a [routerLink]="item.link" routerLinkActive="active">
           <span>{{ item.title }}</span>
         </a>
@@ -14,19 +13,26 @@
       </div>
     </ng-container>
     <ng-container *ngIf="isMobileWidth()">
-      <ng-container *ngIf="!isDrawerOpen()">
-        <span class="material-symbols-outlined" (click)="changeNavDrawer()">
-          menu
-        </span>
-      </ng-container>
-      <ng-container *ngIf="isDrawerOpen()">
-        <div class="nav-drawer">
+      <!-- <ng-container *ngIf="!isDrawerOpen()"> -->
+      <span class="material-symbols-outlined" (click)="changeNavDrawer()">
+        menu
+      </span>
+      <!-- </ng-container> -->
+      <!-- <ng-container *ngIf="isDrawerOpen()"> -->
+      <div class="nav-drawer" [ngClass]="{ open: drawerIsOpen }">
+        <ng-container *ngIf="isDrawerOpen()">
           <span class="material-symbols-outlined" (click)="changeNavDrawer()"
             >close</span
           >
-          <p>hello world</p>
-        </div>
-      </ng-container>
+          @for (item of nav_links; track item.title) {
+          <a [routerLink]="item.link" routerLinkActive="active">
+            <span>{{ item.title }}</span>
+          </a>
+          }
+          <app-footer />
+        </ng-container>
+      </div>
+      <!-- </ng-container> -->
     </ng-container>
   </div>
 </div>
