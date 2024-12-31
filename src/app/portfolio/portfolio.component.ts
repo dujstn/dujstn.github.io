@@ -17,10 +17,11 @@ export class PortfolioComponent {
       title: 'Stack: Multimedia Segmenter',
       description:
         'A Mask R-CNN model capable of distinguishing between various elements of a slide deck. Trained without OCR capabilities, it was able to meet and even surpass state-of-the-art benchmarks on the SPaSe dataset.',
-      media: 'assets/portfolio/stack/1009138_slide-013/plot.jpg',
+      media: 'assets/portfolio/stack/demo.mp4',
       links: {
         GitHub: 'https://github.com/dujstn/stack-model',
-        'Explore more outputs': '',
+        'Explore more outputs':
+          'https://github.com/dujstn/stack-model/tree/main/output',
       },
     },
     interrsect: {
@@ -41,7 +42,7 @@ export class PortfolioComponent {
       title: 'Dr. Mario - Assembly',
       description:
         'A rendition of the Dr. Mario video game, programmed in MIPS Assembly. Created as part of a project for CSC258 at the University of Toronto.',
-      media: 'assets/portfolio/drmario/drmario.mp4',
+      media: 'assets/portfolio/drmario/demo.mp4',
       links: {
         Course: 'https://artsci.calendar.utoronto.ca/course/csc258h1',
       },
