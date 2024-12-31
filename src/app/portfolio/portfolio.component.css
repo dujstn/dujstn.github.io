@@ -56,6 +56,11 @@
     justify-self: center;
   }
 
+  .project-media {
+    max-width: 80vw;
+    min-width: 80vw;
+  }
+
   .content:nth-child(n) .portfolio-content {
     align-items: center;
   }
