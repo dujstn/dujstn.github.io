@@ -22,8 +22,8 @@ export class CvComponent {
 
   experience_entries = [
     {
-      title: 'Full Stack + ML Developer',
-      description: 'Machine learning development in Python.',
+      title: 'Machine Learning Developer',
+      description: 'Machine learning development in Python. Cost optimization of models and distillation of LLMs to achieve deterministic behaviour.',
       src: '/assets/cv/knockri.png',
       web_link: 'https://knockri.com/',
     },
