@@ -1,5 +1,5 @@
 .global {
-  --primary-purple: oklch(54.57% 0.1662 278.57);
+  --primary-purple: oklch(56% 0.1653 287.34);
   --primary-blue: oklch(54.05% 0.2348 270.07);
 
   --primary-background: oklch(99.12% 0.0099 99.83);
@@ -79,8 +79,8 @@ a {
   display: flex;
   align-items: center;
   --pill-accent: var(--primary-purple);
-  background: color-mix(in srgb, var(--pill-accent) 20%, transparent);
-  color: var(--pill-accent);
+  background: color-mix(in srgb, var(--pill-accent) 25%, transparent);
+  color: var(--primary-purple);
   padding-inline: 0.75rem;
   padding-block: 0.375rem;
   border-radius: 2.75rem;
@@ -96,7 +96,8 @@ a {
 }
 
 .pill:hover {
-  background: color-mix(in srgb, var(--pill-accent) 60%, transparent);
+  background: color-mix(in srgb, var(--pill-accent) 20%, var(--primary-blue));
+  color: white;
 }
 
 .pill-group {

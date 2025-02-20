@@ -15,7 +15,7 @@ h1 {
   min-height: 100vh;
   box-sizing: inherit;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/headshot.jpg");
   background-size: cover;
   background-position: 50% 35%;
