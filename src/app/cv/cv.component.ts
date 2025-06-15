@@ -14,13 +14,19 @@ export class CvComponent {
   education_entries = [
     {
       title: 'University of Toronto',
-      description: '2023 - 2027. HBSc. Computer Science, ASIP Stream.',
+      description: '2023 - 2028. HBSc. Computer Science, ASIP Stream.',
       src: '/assets/cv/uoft.png',
       web_link: 'https://www.utoronto.ca/',
     },
   ];
 
   experience_entries = [
+    {
+      title: 'Data Scientist',
+      description: 'Machine learning and generative AI development for internal software supporting 75,000+ employees in Canada and the United States.',
+      src: '/assets/cv/rbc.png',
+      web_link: 'https://rbcroyalbank.com'
+    },
     {
       title: 'Machine Learning Developer',
       description: 'Machine learning development in Python. Cost optimization of models and distillation of LLMs to achieve deterministic behaviour.',
@@ -40,7 +46,7 @@ export class CvComponent {
     {
       title: 'Canada-Wide Science Fair, Bronze Medalist',
       description:
-        '2x alumna among the top 0.1% of projects presented annualy in Canada.',
+        '2x alumna among the top 0.1% of projects presented annually in Canada.',
       src: '/assets/cv/ysc.png',
       web_link: 'https://youthscience.ca/',
     },
