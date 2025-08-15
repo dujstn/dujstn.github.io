@@ -16,9 +16,9 @@ h1 {
   box-sizing: inherit;
   position: relative;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/headshot.jpg");
-  background-size: cover;
-  background-position: 50% 35%;
+    url("/headshot-hor.jpg");
+  background-size: auto;
+  background-position: 10% 67.5%;
   background-repeat: no-repeat;
 }
 
@@ -39,11 +39,11 @@ h1 {
 }
 
 .name-header h1 {
-  color: white;
+  color: var(--offwhite);
 }
 
 .name-header h2 {
-  color: white;
+  color: var(--offwhite);
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 250;
@@ -94,5 +94,13 @@ h1 {
     width: 100%;
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
+  }
+
+  .main {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/headshot-vert.jpg");
+    background-size: auto 130%;
+    background-position: 40% 35%;
+    background-repeat: no-repeat;
   }
 }
