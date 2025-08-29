@@ -9,7 +9,7 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './cv.component.css',
 })
 export class CvComponent {
-  res_src = '/assets/cv/resume.pdf';
+  res_src = '/assets/cv/justin-du-resume.pdf';
 
   education_entries = [
     {
