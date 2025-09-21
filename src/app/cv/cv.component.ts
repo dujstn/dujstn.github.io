@@ -28,6 +28,12 @@ export class CvComponent {
       web_link: 'https://rbcroyalbank.com'
     },
     {
+      title: 'Product Manager',
+      description: 'Product management in collaboration with UTMIST.',
+      src: '/assets/cv/lawbrokr.png',
+      web_link: 'https://lawbrokr.com'
+    },
+    {
       title: 'Machine Learning Developer',
       description: 'Machine learning development in Python. Cost optimization of models and distillation of LLMs to achieve deterministic behaviour.',
       src: '/assets/cv/knockri.png',
