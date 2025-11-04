@@ -57,4 +57,10 @@ export class CvComponent {
       web_link: 'https://youthscience.ca/',
     },
   ];
+
+  categories = [
+    { title: 'Education', entries: this.education_entries },
+    { title: 'Experience', entries: this.experience_entries },
+    { title: 'Awards', entries: this.award_entries },
+  ];
 }

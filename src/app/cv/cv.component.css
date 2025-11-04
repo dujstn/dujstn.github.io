@@ -1,32 +1,46 @@
 .cv-download-pill {
+  margin: 2rem;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
 }
 
-.cv-entry {
+.cv-category-entries {
   display: flex;
   flex-direction: row;
-  padding-left: 2.5vw;
-  align-items: center;
-  gap: 2%;
-  /* border-radius: 5px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); */
-  min-width: auto;
-  max-width: auto;
-  overflow: scroll;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: flex-start;
 }
 
-/* .cv-category-entries {
+.cv-entry {
   display: flex;
-  flex-direction: row;
-  gap: 2%;
-} */
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-background);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 250px;
+  max-width: 300px;
+  flex: 1 1 250px;
+}
+
+.cv-entry:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
 
 .entry-description {
   display: flex;
   flex-direction: column;
+  align-self: center;
+  text-align: center;
+  width: 100%;
 }
 
 .h-divider {
@@ -39,7 +53,9 @@
 }
 
 .organization-logo {
-  max-width: 10vw;
+  max-width: 85%;
+  height: 120px;
+  object-fit: contain;
 }
 
 h3 {
@@ -51,21 +67,15 @@ h3 {
     display: block;
     margin: 10%;
   }
+  .cv-category-title {
+    text-align: center;
+  }
+  .cv-category-entries {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
   .cv-entry {
-    flex-direction: column;
-  }
-  /* .cv-category-entries {
-    flex-direction: column;
-    column-gap: 2%;
-  } */
-  .entry-description p {
-    text-align: center;
-  }
-  .entry-title {
-    text-align: center;
-  }
-  .organization-logo {
-    max-width: 60vw;
-    max-height: 10vh;
+    max-width: 100%;
+    min-width: auto;
   }
 }
