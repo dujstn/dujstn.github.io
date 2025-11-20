@@ -20,7 +20,13 @@ export class CvComponent {
     },
   ];
 
-  experience_entries = [
+  experience_entries = [    
+    {
+      title: 'Data Engineer',
+      description: 'Summer 2026',
+      src: '/assets/cv/rbc-amplify.png',
+      web_link: 'https://jobs.rbc.com/ca/en/amplify'
+    },
     {
       title: 'Data Scientist',
       description: 'Machine learning and generative AI development for internal software supporting 75,000+ employees in Canada and the United States.',

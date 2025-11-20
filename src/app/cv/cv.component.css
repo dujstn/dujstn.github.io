@@ -24,9 +24,10 @@
   box-shadow: inset 0 4px 8px var(--gray-2);
   background-color: var(--bg-p);
   transition: transform 0.2s, box-shadow 0.2s;
-  min-width: 250px;
-  max-width: 300px;
-  flex: 1 1 250px;
+
+  flex: 1 1 calc((100% - 4rem) / 3);
+  max-width: calc((100% - 4rem) / 3);
+  min-width: 0;
 }
 
 .cv-entry-content {
@@ -81,9 +82,12 @@ h3 {
   }
   .cv-category-entries {
     gap: 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
   }
   .cv-entry {
+    min-width: 75vw;
     max-width: 100%;
-    min-width: auto;
   }
 }
