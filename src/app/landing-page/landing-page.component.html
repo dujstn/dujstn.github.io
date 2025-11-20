@@ -1,12 +1,15 @@
 <div class="main">
   <div class="content">
-    <div class="name-header">
-      <h1>{{ title }}</h1>
-      <h2>{{ subtitle }}</h2>
-    </div>
     <div class="right-side">
+      <div class="name-header">
+        <h1>{{ title }}</h1>
+        <h2>{{ subtitle }}</h2>
+      </div>
+    </div>
+    <div class="v-divider"></div>
+    <div class="left-side">
       <div class="pill-group">
-        @for (item of [ { title: 'CV', link: '/cv' }, { title: 'Portfolio',
+        @for (item of [ { title: 'About', link: '/cv' }, { title: 'Portfolio',
         link: '/portfolio' }, ]; track item.title) {
         <a
           class="pill"

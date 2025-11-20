@@ -1,38 +1,40 @@
 <app-header class="header" />
 <div class="main">
   <div class="content">
-    <div class="cv-download-pill">
-      <a class="pill" href="{{ res_src }}" target="_blank">Download Full CV</a>
-    </div>
-    <div class="h-divider" role="separator" aria-label="Divider"></div>
     <div class="cv-content">
       @for (category of categories; track category.title; let isLast = $last) {
-        <div class="cv-category-title">
-          <h2>{{ category.title }}</h2>
-        </div>
-        <div class="cv-category-entries">
-          @for (item of category.entries; track item.title) {
-            <div class="cv-entry">
-              <div class="logo-link">
-                <a href="{{ item.web_link }}"
-                target="_blank"
-                style="display: flex; justify-content: center;"
-                  ><img class="organization-logo" src="{{ item.src }}"
-                /></a>
-              </div>
-              <div class="entry-title">
-                <h3>{{ item.title }}</h3>
-              </div>
-              <div class="entry-description">
-                <p>{{ item.description }}</p>
-              </div>
+      <div class="cv-category-title">
+        <h1>{{ category.title }}</h1>
+      </div>
+      <div class="cv-category-entries">
+        @for (item of category.entries; track item.title) {
+        <div class="cv-entry">
+          <div class="cv-entry-header">
+            <a
+              href="{{ item.web_link }}"
+              target="_blank"
+              style="display: flex; justify-content: center"
+              ><img class="organization-logo" src="{{ item.src }}"
+            /></a>
+          </div>
+          <div class="cv-entry-content">
+            <div class="cv-entry-title">
+              <h2>{{ item.title }}</h2>
             </div>
-          }
+            <div class="cv-entry-description">
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
         </div>
-        @if (!isLast) {
-          <div class="h-divider" role="separator" aria-label="Divider"></div>
         }
-      }
+      </div>
+      @if (!isLast) {
+      <div class="h-divider" role="separator" aria-label="Divider"></div>
+      } }
+    </div>
+    <div class="h-divider" role="separator" aria-label="Divider"></div>
+    <div class="cv-download-pill">
+      <a class="pill" href="{{ res_src }}" target="_blank">Download Full CV</a>
     </div>
   </div>
 </div>

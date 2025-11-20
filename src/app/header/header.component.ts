@@ -17,7 +17,7 @@ export class HeaderComponent {
 
   nav_links = [
     { title: 'Portfolio', link: '/portfolio' },
-    { title: 'CV', link: '/cv' },
+    { title: 'About', link: '/cv' },
   ];
 
   ngOnInit() {

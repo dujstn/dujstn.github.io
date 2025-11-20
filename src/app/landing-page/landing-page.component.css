@@ -1,10 +1,9 @@
 h1 {
   font-size: 3.125rem;
-  color: var(--gray-900);
+  color: var(--gray-0);
   line-height: 100%;
   letter-spacing: -0.1rem;
   margin: 0;
-  font-family: "Afacad Flux", serif;
   font-optical-sizing: auto;
   font-weight: 350;
   font-style: normal;
@@ -15,11 +14,23 @@ h1 {
   min-height: 100vh;
   box-sizing: inherit;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(
+      color-mix(in srgb, var(--gray-0) 80%, transparent 20%),
+      color-mix(in srgb, var(--gray-0) 80%, transparent 20%)
+    ),
     url("/headshot-hor.jpg");
   background-size: auto;
-  background-position: 10% 67.5%;
+  background-position: center 67.5%;
   background-repeat: no-repeat;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.content {
+  flex-direction: row;
 }
 
 .content h1 {
@@ -39,27 +50,34 @@ h1 {
 }
 
 .name-header h1 {
-  color: var(--offwhite);
+  color: var(--bg-p);
+  font-family: "Libre Bodoni", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: regular;
 }
 
 .name-header h2 {
-  color: var(--offwhite);
+  color: var(--bg-p);
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 250;
 }
 
-/* .pill-group .pill:nth-child(6n + 1) {
-  --pill-accent: var(--bright-blue);
+.pill {
+  background-color: var(--bg-p);
+  border-color: var(--bg-p);
+  box-shadow: 4px 4px 0 var(--primary-purple);
 }
-.pill-group .pill:nth-child(6n + 2) {
-  --pill-accent: var(--french-violet);
+
+.pill:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
-.pill-group .pill:nth-child(6n + 3),
-.pill-group .pill:nth-child(6n + 4),
-.pill-group .pill:nth-child(6n + 5) {
-  --pill-accent: var(--hot-red);
-} */
+
+.pill-group {
+  border-radius: 12px;
+}
 
 .pill-group svg {
   margin-inline-start: 0.25rem;
@@ -67,8 +85,8 @@ h1 {
 
 .social-links {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
   gap: 0.73rem;
   margin-top: 1.5rem;
   animation: 1s ease-out 0s 1 slideBottom;
@@ -76,7 +94,7 @@ h1 {
 
 .social-links path {
   transition: fill 0.3s ease;
-  fill: var(--gray-400);
+  fill: var(--bg-p);
 }
 
 .social-links a:hover svg path {
@@ -87,13 +105,6 @@ h1 {
   .content {
     flex-direction: column;
     width: max-content;
-  }
-
-  .divider {
-    height: 1px;
-    width: 100%;
-    background: var(--red-to-pink-to-purple-horizontal-gradient);
-    margin-block: 1.5rem;
   }
 
   .main {

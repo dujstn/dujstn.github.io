@@ -1,3 +1,7 @@
+.content {
+  gap: 3rem;
+}
+
 .pill-group {
   display: flex;
   flex-direction: row;
@@ -25,7 +29,8 @@
   min-width: 50%;
   max-width: 50%;
   transition: 0.25s;
-  filter: drop-shadow(10px 10px 15px var(--gray-400));
+  filter: drop-shadow(10px 10px 15px var(--gray-2));
+  border-radius: 12px;
 }
 
 .project-media:hover {
@@ -42,6 +47,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
   }
 
   .portfolio-text-and-links {

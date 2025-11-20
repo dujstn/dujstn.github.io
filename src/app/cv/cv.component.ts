@@ -34,7 +34,7 @@ export class CvComponent {
       web_link: 'https://lawbrokr.com'
     },
     {
-      title: 'Machine Learning Developer',
+      title: 'ML Developer',
       description: 'Machine learning development in Python. Cost optimization of models and distillation of LLMs to achieve deterministic behaviour.',
       src: '/assets/cv/knockri.png',
       web_link: 'https://knockri.com/',
