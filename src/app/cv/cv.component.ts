@@ -56,7 +56,7 @@ export class CvComponent {
 
   award_entries = [
     {
-      title: 'Canada-Wide Science Fair, Bronze Medalist',
+      title: 'Canada-Wide Science Fair - Bronze Medalist',
       description:
         '2x alumna among the top 0.1% of projects presented annually in Canada.',
       src: '/assets/cv/ysc.png',

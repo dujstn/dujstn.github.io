@@ -68,10 +68,6 @@
   object-fit: contain;
 }
 
-h3 {
-  font-weight: 600;
-}
-
 @media screen and (max-width: 650px) {
   .h-divider {
     display: block;
